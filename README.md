@@ -4,8 +4,6 @@
 This repo is designed to take me from the basics to becoming a Python expert. Before we dive into the content, let's go over the content of this repo.
 
 ### 1. Python Basics
-- Introduction to Python
-- Coding in Python using the command line or Python console
 - 70+ lectures covering each Python programming concept
 
 ### 2. Tkinter - Building Desktop Applications
