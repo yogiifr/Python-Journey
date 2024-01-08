@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Member
 from .forms import MemberForm
+from django.contrib import massages
 
 # Create your views here.
 def home(request):
@@ -12,6 +13,7 @@ def join(request):
         form = MemberForm(request.POST or None)  
         if form.is_valid():
             form.save()
-            return render(request, 'join.html', {})
+            massages.success(request, ('Your Form Has Been Submitted Successfully!'))
+            return redirect('home')
     else:
         return render(request, 'join.html', {})
